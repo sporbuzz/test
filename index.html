@@ -62,39 +62,125 @@
 <!-- container -->
  <div id="rmpPlayer"></div> <div class="marquee yellow"><span> <i class=""style="font-size:20pt" aria-hidden="true"></i></span> <marquee scrollamount="5" direction="left" onmouseover="stop()" onmouseout="start()">*** বর্তমানে আমাদের ওয়েব সাইট আপডেট চলছে, আপডেট চলাকালীন সময় কিছু চ্যানেল ডাউন হতে পারে। টিভি চ্যানেল প্লে হতে ৫ থেকে ১০ সেকেন্ড টাইম নিতে পারে, তবে সেটা সার্ভার ও আপনার ইন্টারনেটের উপর নির্ভর করবে। ⛔ আপনার মতামত জানাতে আমাদের টেলিগ্রাম গ্রুপে জয়েন করুন, এবং কোনো চ্যানেল প্লে না হলে সেটাও বলুন, ধন্যবাদ। *** </marquee> </div> 	
 
-<!-- For Single Player -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"></meta>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+    <title>Multi-Channel Video Player with Ads</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
 
+        #video-container {
+            margin: 20px auto;
+            width: auto;
+            max-width: 800px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000;">
-  <!-- Video Player -->
-  <iframe
-    src="https://cdn.crichdplays.ru/embed2.php?id=btsp1"
-    title="Professional Video Player"
-    style="position: absolute; top: 0; left: 0; width: 640x; height: 360px; border: none;"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-  
-  <!-- Scrolling Text -->
-  <div style="position: absolute; bottom: 50px; width: 100%; overflow: hidden; white-space: nowrap; background:#; color: white; font-size: 16px; font-family: Arial, sans-serif;">
-    <div style="display: inline-block; animation: scroll-text 30s linear infinite; padding-left: 100%;">
-      Our Official Domain is " GamePulseTV.LIVE " Please Bookmark our Official domain.! Keep Supporting and Keep Sharing.
+        #player-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #iframe-container {
+            width: 100%;
+            aspect-ratio: 16 / 9; /* Ensures the player maintains a 16:9 ratio */
+        }
+
+        #iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        #channel-buttons-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+            border-top: 1px solid #ccc;
+            padding: 10px;
+            flex-wrap: wrap; /* Allows buttons to wrap to the next line on smaller screens */
+        }
+
+        #channel-buttons-bar button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        #channel-buttons-bar button:hover {
+            background-color: #0056b3;
+        }
+
+        #banner-ad {
+            width: 100%;
+            height: 100px;
+            background-color: #f1f1f1;
+            text-align: center;
+            line-height: 100px;
+            color: #333;
+            font-size: 16px;
+            border-top: 1px solid #ccc;
+        }
+
+        @media (max-width: 600px) {
+            #iframe-container {
+                aspect-ratio: 4 / 3; /* Adjusts for smaller screens */
+            }
+        }
+    </style>
+    <script>
+        function switchChannel(url) {
+            const player = document.getElementById('video-player');
+            player.src = url;
+        }
+
+        function openTelegram() {
+            window.open('#', '_blank');
+        }
+
+        function contactUs() {
+            window.open('#', '_blank');
+        }
+    </script>
+</head>
+<body>
+    <h1>Pakistan Premier League</h1>
+    <div id="video-container">
+        <div id="player-section">
+            <div id="iframe-container">
+                <iframe allowfullscreen="" id="video-player" src="https://cdn.crichdplays.ru/embed2.php?id=ptvsp">
+                </iframe>
+            </div>
+        </div>
+        <div id="channel-buttons-bar">
+            <button onclick="switchChannel('https://cdn.crichdplays.ru/embed2.php?id=ptvsp')"> PTV SPORTS HD</button>
+            <button onclick="switchChannel('https://cdn.crichdplays.ru/embed2.php?id=starsp')">Star Sports 1 HD</button>
+            <button onclick="switchChannel('https://cdn.crichdplays.ru/embed2.php?id=tensp')">TEN SPORTS HD</button>
+        </div>
+        <div id="banner-ad">
+          <marquee> Welcome to GamePulseTV</marquee>
+        </div>
     </div>
-  </div>
-
-  <!-- Watermark -->
-  <div style="position: absolute; bottom: 10px; right: 10px; color: rgba(255, 255, 255, 0.8); font-size: 14px; font-family: Arial, sans-serif; background: rgba(0, 0, 0, 0.5); padding: 4px 8px; border-radius: 4px;">
-    
-  </div>
-</div>
-
-<!-- CSS Animation -->
-<style>
-  @keyframes scroll-text {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-  }
-</style>
+</body>
+</html>
 
 
 	
