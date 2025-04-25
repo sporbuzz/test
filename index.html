@@ -16,7 +16,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sportbuzz 24</title>
+<title>TV 2025 </title>
 <link href="bootstrap.min.css" rel="stylesheet">
 <link href="style.css" rel="stylesheet">
 <!--[if lt IE 9]>
@@ -41,7 +41,6 @@
 
 <li><a href="javascript:void();" onclick="player.location.href='https://tv2025.netlify.app/RS.html?url=https://c4s22.vfruitfairy.com/com1/tracks-v1a1/mono.m3u8'"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP3ayqVBkQut9cbPszIUfYTLAoMFXxrjDsGcckff3l3b6vBEEd0L5UqgrN&s=10" alt="Star Sports 1"></a></li>
 <li><a href="javascript:void();" onclick="player.location.href='https://tv2025.netlify.app/rs?url=https://streams2.sofast.tv/ptnr-yupptv/title-BOLLYWOOD-4U-ENG_yupptv/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/22d13e33-8705-40e8-9809-4e80aa795f15/6eb97880-e46a-4abb-b9a3-10043766e738/2.m3u8'"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOIRBIF3zQKAz9IO_Clgz4tX9FBOhRmmIJcymFAc3CfRBO9q87ibCnwjw9&s=10" alt="T Sports"></a></li>
-<li><a href="javascript:void();" onclick="player.location.href='https://tv2025.netlify.app/RS.html?url=https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDDEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFsaWRtaW51aiPhnPTI2/news24.stream/playlist.m3u8'"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG2LmFWRfslMhGH5nRACLFm9lQ6TNDspjAnA&s" alt="Gazi Tv"></a></li>
 <li><a href="javascript:void();" onclick="player.location.href='https://tv2025.netlify.app/RS.html?url=https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8'"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG2LmFWRfslMhGH5nRACLFm9lQ6TNDspjAnA&s" alt="Gazi Tv"></a></li>
 <li><a href="javascript:void();" onclick="player.location.href='https://tv2025.netlify.app/rs?url=https://kwtspta.cdn.mangomolo.com/sp/smil:sp.stream.smil/chunklist_b2500000_t64NzIwcA==.m3u8'"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG2LmFWRfslMhGH5nRACLFm9lQ6TNDspjAnA&s" alt="Gazi Tv"></a></li>
 <li><a href="javascript:void();" onclick="player.location.href='https://tv2025.netlify.app/rs?url=https://greengold-yupptv.vgcdn.net/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/af835e36-30e1-426f-b0d4-7383a330d69c/5c9f96e0-1736-4e28-8de2-34634b7e280d/3.m3u8'"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG2LmFWRfslMhGH5nRACLFm9lQ6TNDspjAnA&s" alt="Gazi Tv"></a></li>
@@ -62,125 +61,6 @@
 <!-- container -->
  <div id="rmpPlayer"></div> <div class="marquee yellow"><span> <i class=""style="font-size:20pt" aria-hidden="true"></i></span> <marquee scrollamount="5" direction="left" onmouseover="stop()" onmouseout="start()">*** বর্তমানে আমাদের ওয়েব সাইট আপডেট চলছে, আপডেট চলাকালীন সময় কিছু চ্যানেল ডাউন হতে পারে। টিভি চ্যানেল প্লে হতে ৫ থেকে ১০ সেকেন্ড টাইম নিতে পারে, তবে সেটা সার্ভার ও আপনার ইন্টারনেটের উপর নির্ভর করবে। ⛔ আপনার মতামত জানাতে আমাদের টেলিগ্রাম গ্রুপে জয়েন করুন, এবং কোনো চ্যানেল প্লে না হলে সেটাও বলুন, ধন্যবাদ। *** </marquee> </div> 	
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8"></meta>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
-    <title>Multi-Channel Video Player with Ads</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        #video-container {
-            margin: 20px auto;
-            width: auto;
-            max-width: 800px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        #player-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        #iframe-container {
-            width: 100%;
-            aspect-ratio: 16 / 9; /* Ensures the player maintains a 16:9 ratio */
-        }
-
-        #iframe-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        #channel-buttons-bar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f8f9fa;
-            border-top: 1px solid #ccc;
-            padding: 10px;
-            flex-wrap: wrap; /* Allows buttons to wrap to the next line on smaller screens */
-        }
-
-        #channel-buttons-bar button {
-            margin: 5px;
-            padding: 10px;
-            font-size: 14px;
-            cursor: pointer;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        #channel-buttons-bar button:hover {
-            background-color: #0056b3;
-        }
-
-        #banner-ad {
-            width: 100%;
-            height: 100px;
-            background-color: #f1f1f1;
-            text-align: center;
-            line-height: 100px;
-            color: #333;
-            font-size: 16px;
-            border-top: 1px solid #ccc;
-        }
-
-        @media (max-width: 600px) {
-            #iframe-container {
-                aspect-ratio: 4 / 3; /* Adjusts for smaller screens */
-            }
-        }
-    </style>
-    <script>
-        function switchChannel(url) {
-            const player = document.getElementById('video-player');
-            player.src = url;
-        }
-
-        function openTelegram() {
-            window.open('#', '_blank');
-        }
-
-        function contactUs() {
-            window.open('#', '_blank');
-        }
-    </script>
-</head>
-<body>
-    <h1>Pakistan Premier League</h1>
-    <div id="video-container">
-        <div id="player-section">
-            <div id="iframe-container">
-                <iframe allowfullscreen="" id="video-player" src="https://cdn.crichdplays.ru/embed2.php?id=ptvsp">
-                </iframe>
-            </div>
-        </div>
-        <div id="channel-buttons-bar">
-            <button onclick="switchChannel('https://cdn.crichdplays.ru/embed2.php?id=ptvsp')"> PTV SPORTS HD</button>
-            <button onclick="switchChannel('https://cdn.crichdplays.ru/embed2.php?id=starsp')">Star Sports 1 HD</button>
-            <button onclick="switchChannel('https://cdn.crichdplays.ru/embed2.php?id=tensp')">TEN SPORTS HD</button>
-        </div>
-        <div id="banner-ad">
-          <marquee> Welcome to GamePulseTV</marquee>
-        </div>
-    </div>
-</body>
-</html>
 
 
 	
